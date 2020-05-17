@@ -60,7 +60,7 @@ namespace ExpressionSolver
                     Console.ResetColor();
 
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("ERRORS: ");
+                    Console.WriteLine(errors.Count + " ERROR" + ((errors.Count == 1) ? ": " : "S: "));
                     Console.ResetColor();
 
                     foreach (var error in errors)
