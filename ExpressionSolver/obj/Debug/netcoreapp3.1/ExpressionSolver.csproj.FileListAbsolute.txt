@@ -1,0 +1,15 @@
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionSolver.deps.json
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionSolver.runtimeconfig.json
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionSolver.runtimeconfig.dev.json
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionSolver.dll
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionSolver.pdb
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionParserLib.dll
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/bin/Debug/netcoreapp3.1/ExpressionParserLib.pdb
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.csprojAssemblyReference.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.csproj.CoreCompileInputs.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.AssemblyInfoInputs.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.AssemblyInfo.cs
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.csproj.CopyComplete
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.dll
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.pdb
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionSolver/obj/Debug/netcoreapp3.1/ExpressionSolver.genruntimeconfig.cache

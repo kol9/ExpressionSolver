@@ -1,0 +1,9 @@
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/bin/Debug/netcoreapp3.1/ExpressionParserLib.deps.json
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/bin/Debug/netcoreapp3.1/ExpressionParserLib.dll
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/bin/Debug/netcoreapp3.1/ExpressionParserLib.pdb
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.csprojAssemblyReference.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.csproj.CoreCompileInputs.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.AssemblyInfoInputs.cache
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.AssemblyInfo.cs
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.dll
+/Users/nikolay/RiderProjects/ExpressionSolver/ExpressionParserLib/obj/Debug/netcoreapp3.1/ExpressionParserLib.pdb
