@@ -1,7 +1,7 @@
 # ExpressionSolver
 Консольный калькулятор, вычисляющий арифметические выражения, состоящих из простейших арифметических операций (+, -, *, /, скобки), и сообщает об ошибках, которые были допущены в выражении.
 # Примеры запуска:
-![Пример правильного выражения](https://pasteboard.co/J8PT0PO.png)
-![Пример правильного выражения](https://pasteboard.co/J8PTPyh.png)
-![Пример правильного выражения](https://pasteboard.co/J8PU5Wu.png)
-![Пример правильного выражения](https://pasteboard.co/J8PUsDj.png)
+![Пример правильного выражения](https://pasteboard.co/J8PVGkY.jpg)
+![Пример правильного выражения](https://pasteboard.co/J8PVJEL.jpg)
+![Пример правильного выражения](https://pasteboard.co/J8PVMFD.jpg)
+![Пример правильного выражения](https://pasteboard.co/J8PVPRo.jpg)
