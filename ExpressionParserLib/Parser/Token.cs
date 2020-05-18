@@ -14,5 +14,4 @@ namespace ExpressionParserLib.Parser
         CloseParenthesis,
         Error
     }
-    
 }
