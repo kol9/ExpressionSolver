@@ -45,6 +45,7 @@ namespace ExpressionParserLib.Tests
             _badTests = new List<StringPair>()
             {
                 new StringPair("No first argument", " + 2"),
+                new StringPair("Missing argument", "- * 2"),
                 new StringPair("No second argument", " 2 + "),
                 new StringPair("No middle argument", " 2 +  + 3"),
                 new StringPair("No middle argument", " 2 + (2 +  + 4) + 3"),

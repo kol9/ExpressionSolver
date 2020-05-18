@@ -81,9 +81,9 @@ namespace ExpressionParserLib.Parser
             return _expression.Substring(l, r - l);
         }
 
-        private void CheckForOperand()
+        private void CheckForArgument()
         {
-            if (_curToken != Token.OpenParenthesis && _curToken != Token.Begin && !_curToken.IsBinaryOperation())
+            if (_curToken != Token.OpenParenthesis && _curToken != Token.Begin && !_curToken.IsOperation())
             {
                 return;
             }
@@ -112,7 +112,7 @@ namespace ExpressionParserLib.Parser
             SkipWhiteSpaces();
             if (_ind >= _expression.Length)
             {
-                CheckForOperand();
+                CheckForArgument();
                 _curToken = Token.End;
                 return;
             }
@@ -129,7 +129,7 @@ namespace ExpressionParserLib.Parser
                     {
                         if (_ind + 1 >= _expression.Length)
                         {
-                            _errors.Add(new MissingArgumentException(_expression, _ind));
+                            _errors.Add(new MissingArgumentException(_expression, _ind + 1));
                             _curToken = Token.Error;
                         }
                         else if (char.IsDigit(_expression[_ind + 1]))
@@ -158,15 +158,15 @@ namespace ExpressionParserLib.Parser
 
                     break;
                 case '+':
-                    CheckForOperand();
+                    CheckForArgument();
                     _curToken = Token.Add;
                     break;
                 case '*':
-                    CheckForOperand();
+                    CheckForArgument();
                     _curToken = Token.Multiply;
                     break;
                 case '/':
-                    CheckForOperand();
+                    CheckForArgument();
                     _curToken = Token.Divide;
                     break;
                 case '(':
@@ -182,7 +182,7 @@ namespace ExpressionParserLib.Parser
 
                     break;
                 case ')':
-                    if (_curToken == Token.OpenParenthesis || _curToken.IsBinaryOperation())
+                    if (_curToken == Token.OpenParenthesis || _curToken.IsOperation())
                     {
                         _errors.Add(new MissingArgumentException(_expression, _ind));
                     }
