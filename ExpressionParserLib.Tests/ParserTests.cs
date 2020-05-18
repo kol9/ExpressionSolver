@@ -10,39 +10,39 @@ namespace ExpressionParserLib.Tests
 {
     public class ParserTests
     {
-        private ExpressionParser _parser;
-        private Random _random;
+        private List<Tuple<string, string>> _badTests;
 
 
         private List<TestPair> _goodTests;
-        private List<Tuple<string, string>> _badTests;
+        private ExpressionParser _parser;
+        private Random _random;
 
         [SetUp]
         public void Setup()
         {
             _random = new Random();
             _parser = new ExpressionParser();
-            _goodTests = new List<TestPair>()
+            _goodTests = new List<TestPair>
             {
-                new TestPair("228", (x, y, z) => (228)),
-                new TestPair("x+y", (x, y, z) => (x + y)),
-                new TestPair("x-y", (x, y, z) => (x - y)),
-                new TestPair("x*y", (x, y, z) => (x * y)),
-                new TestPair("x/y", (x, y, z) => (x / y)),
-                new TestPair("0/x", (x, y, z) => (0 / x)),
-                new TestPair("x/0", (x, y, z) => (x / 0)),
-                new TestPair("x /    -    y", (x, y, z) => (x / -y)),
-                new TestPair("x* \t \n  y", (x, y, z) => (x * y)),
-                new TestPair("--x--y--z", (x, y, z) => (x + y + z)),
-                new TestPair("x*z  +(-4-y   )/z", (x, y, z) => (x * z + (-4 - y) / z)),
+                new TestPair("228", (x, y, z) => 228),
+                new TestPair("x+y", (x, y, z) => x + y),
+                new TestPair("x-y", (x, y, z) => x - y),
+                new TestPair("x*y", (x, y, z) => x * y),
+                new TestPair("x/y", (x, y, z) => x / y),
+                new TestPair("0/x", (x, y, z) => 0 / x),
+                new TestPair("x/0", (x, y, z) => x / 0),
+                new TestPair("x /    -    y", (x, y, z) => x / -y),
+                new TestPair("x* \t \n  y", (x, y, z) => x * y),
+                new TestPair("--x--y--z", (x, y, z) => x + y + z),
+                new TestPair("x*z  +(-4-y   )/z", (x, y, z) => x * z + (-4 - y) / z),
                 new TestPair("-(-(-\t\t-5 + 23   *x*y) + 1 * z) -(((-11)))",
-                    (x, y, z) => (-(-(5 + 23 * x * y) + z) + 11)),
-                new TestPair("x--y--z", (x, y, z) => (x + y + z)),
-                new TestPair("x/y/z", (x, y, z) => (x / y / z)),
-                new TestPair("(((((x + y + (-10*-z))))))", (x, y, z) => (x + y + (-10 * -z))),
+                    (x, y, z) => -(-(5 + 23 * x * y) + z) + 11),
+                new TestPair("x--y--z", (x, y, z) => x + y + z),
+                new TestPair("x/y/z", (x, y, z) => x / y / z),
+                new TestPair("(((((x + y + (-10*-z))))))", (x, y, z) => x + y + -10 * -z)
             };
 
-            _badTests = new List<StringPair>()
+            _badTests = new List<StringPair>
             {
                 new StringPair("No first argument", " + 2"),
                 new StringPair("Missing argument", "- * 2"),
@@ -61,7 +61,7 @@ namespace ExpressionParserLib.Tests
                 new StringPair("Single minus", "-"),
                 new StringPair("Single unexpected symbol", "g"),
                 new StringPair("Empty expression", "(())"),
-                new StringPair("Wrong number", "2.,.,+4"),
+                new StringPair("Wrong number", "2.,.,+4")
             };
         }
 
@@ -70,7 +70,6 @@ namespace ExpressionParserLib.Tests
         public void CorrectTests()
         {
             for (var i = 0; i < 100; ++i)
-            {
                 foreach (var test in _goodTests)
                 {
                     var x = _random.NextDouble() + _random.Next();
@@ -84,7 +83,6 @@ namespace ExpressionParserLib.Tests
                     Assert.IsTrue(item2.Count == 0);
                     Assert.AreEqual(test.Item2(x, y, z), item1.Evaluate());
                 }
-            }
         }
 
         [Test]
@@ -96,10 +94,7 @@ namespace ExpressionParserLib.Tests
                 Assert.IsTrue(exceptions.Count != 0);
                 Console.WriteLine("TESTING: " + item1);
 
-                foreach (var err in exceptions)
-                {
-                    Console.WriteLine(err.ToString());
-                }
+                foreach (var err in exceptions) Console.WriteLine(err.ToString());
             }
         }
     }

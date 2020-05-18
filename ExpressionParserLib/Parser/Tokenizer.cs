@@ -6,13 +6,13 @@ namespace ExpressionParserLib.Parser
 {
     public class Tokenizer
     {
+        private readonly List<ParsingException> _errors;
         private readonly string _expression;
-        private int _ind;
         private Token _curToken;
+        private int _ind;
         private int _parenthesisBalance;
 
         private double _value;
-        private readonly List<ParsingException> _errors;
 
         public Tokenizer(string expression)
         {

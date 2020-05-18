@@ -20,7 +20,7 @@ namespace ExpressionParserLib.Tests
                                           " (2 - " +
                                           "1)  \t  " +
                                           " & ^ + 2..3   /  2.1337");
-            var expectedTokens = new List<Token>()
+            var expectedTokens = new List<Token>
             {
                 Token.Begin, Token.Negate, Token.OpenParenthesis, Token.Error, Token.CloseParenthesis,
                 Token.Error, Token.Number, Token.Add, Token.Number,

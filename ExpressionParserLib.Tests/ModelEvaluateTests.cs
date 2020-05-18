@@ -7,9 +7,7 @@ namespace ExpressionParserLib.Tests
 {
     public class ModelEvaluateTests
     {
-        private readonly Random _random = new Random();
-
-        private readonly List<Tuple<double, double>> _args = new List<Tuple<double, double>>()
+        private readonly List<Tuple<double, double>> _args = new List<Tuple<double, double>>
         {
             new Tuple<double, double>(0, 0), new Tuple<double, double>(-1, 0),
             new Tuple<double, double>(1, 0),
@@ -19,9 +17,12 @@ namespace ExpressionParserLib.Tests
             new Tuple<double, double>(double.Epsilon, 31)
         };
 
+        private Random _random;
+
         [SetUp]
         public void Setup()
         {
+            _random = new Random();
             for (var i = 0; i < 10; ++i)
             {
                 var a = _random.NextDouble() + _random.Next();
@@ -33,37 +34,25 @@ namespace ExpressionParserLib.Tests
         [Test]
         public void AddEvaluateTest()
         {
-            foreach (var (a, b) in _args)
-            {
-                Assert.AreEqual((a + b), new Add(new Number(a), new Number(b)).Evaluate());
-            }
+            foreach (var (a, b) in _args) Assert.AreEqual(a + b, new Add(new Number(a), new Number(b)).Evaluate());
         }
 
         [Test]
         public void SubtractEvaluateTest()
         {
-            foreach (var (a, b) in _args)
-            {
-                Assert.AreEqual((a - b), new Subtract(new Number(a), new Number(b)).Evaluate());
-            }
+            foreach (var (a, b) in _args) Assert.AreEqual(a - b, new Subtract(new Number(a), new Number(b)).Evaluate());
         }
 
         [Test]
         public void MultiplyEvaluateTest()
         {
-            foreach (var (a, b) in _args)
-            {
-                Assert.AreEqual((a * b), new Multiply(new Number(a), new Number(b)).Evaluate());
-            }
+            foreach (var (a, b) in _args) Assert.AreEqual(a * b, new Multiply(new Number(a), new Number(b)).Evaluate());
         }
 
         [Test]
         public void DivideEvaluateTest()
         {
-            foreach (var (a, b) in _args)
-            {
-                Assert.AreEqual((a / b), new Divide(new Number(a), new Number(b)).Evaluate());
-            }
+            foreach (var (a, b) in _args) Assert.AreEqual(a / b, new Divide(new Number(a), new Number(b)).Evaluate());
         }
 
         [Test]
@@ -71,8 +60,8 @@ namespace ExpressionParserLib.Tests
         {
             foreach (var (a, b) in _args)
             {
-                Assert.AreEqual((-a), new Negate(new Number(a)).Evaluate());
-                Assert.AreEqual((-b), new Negate(new Number(b)).Evaluate());
+                Assert.AreEqual(-a, new Negate(new Number(a)).Evaluate());
+                Assert.AreEqual(-b, new Negate(new Number(b)).Evaluate());
             }
         }
     }

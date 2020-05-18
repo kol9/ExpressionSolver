@@ -15,7 +15,7 @@ namespace ExpressionParserLib.Model
         {
             return _lhs.Evaluate() * _rhs.Evaluate();
         }
-        
+
         public override string ToString()
         {
             return "(" + _lhs.ToString() + "*" + _rhs.ToString() + ")";
